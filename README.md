@@ -15,4 +15,5 @@ The program is structured in 3 files:
 The n-body problem is the problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally. In our case, we are solving an n-body problem restricted on the celestial bodies of the Solar System. 
 The solve an n-body problem the following steps have to be implemented:
 - Calculate the acceleration matrix of each body using Newton's universal law of gravitation.
-![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
+- 
+![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
