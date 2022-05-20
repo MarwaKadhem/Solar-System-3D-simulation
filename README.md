@@ -2,7 +2,7 @@
 
 ![This is an image](solarsys_im.jpg)
 
-General description: 3D simulation of the Solar System by propagating the orbit of each celestial body, in addition to the interplanetary trajectory of Pioneer 10. The initial  conditions used to solve the n-body problem are generated using the ephemeris imported from the SPICE files (spiceypy library). 
+**General description**: 3D simulation of the Solar System by propagating the orbit of each celestial body, in addition to the interplanetary trajectory of Pioneer 10. The initial  conditions used to solve the n-body problem are generated using the ephemeris imported from the SPICE files (SpiceyPy library). 
 
 The program is structured in 3 files:
 - **Module (PropagationModule.py)** which contains all the functions needed to solve the n-body problem applied on the Solar System. This includes getting the initial conditions from NASA SPICE (Spacecraft, Planet, Instrument, C-matrix, Events ephemeris) files through the spiceypy SPK kernel. 
@@ -31,11 +31,13 @@ The solve an n-body problem the following steps have to be implemented:
 a_i = G * sum ( (r_j - r_i) / abs(r_j - r_i)^3 )
 ```
 - **Integrate twice** the acceleration to obtain position of bodies. To do so, we used the Verlet-Störmer intergration, also known as the [leapfrog method](https://en.wikipedia.org/wiki/Leapfrog_integration). In addition to being very simple to implement, this integration provides very good results for space mechanics problems (good conservation of energy). The kick-drift-kick variant was here used in particular.
-- Get initial positions from the SPICE ephemeris and the SPK kernel through the SpiceyPy library. Please read the package documention [here](https://spiceypy.readthedocs.io/en/v2.3.1/documentation.html). The needed binary data files are downloaded from the [NAIF website](https://naif.jpl.nasa.gov/naif/aboutspice.html). By initial conditions is meant the mass of the considered bodies, tbe initial velocities and the initial positions. 
-- Plotting the result through time from the beginning of the simumation to the end with a given time step. Matplotlib and the [animation module](https://matplotlib.org/stable/api/animation_api.html) is used. 
+- Get initial positions from the SPICE ephemeris and the SPK kernel through the [SpiceyPy library](https://spiceypy.readthedocs.io/en/v2.3.1/documentation.html). Please read the package documention before. The needed binary data files are downloaded from the [NAIF website](https://naif.jpl.nasa.gov/naif/aboutspice.html). By initial conditions is meant the mass of the considered bodies, tbe initial velocities and the initial positions. 
+- Calculate the **total energy** of the system to check energy conservation through time. This is a good way to validate our solution to the n-body problem.
+- **Plotting** the results through time from the beginning of the simumation to the end with a given time step. Matplotlib and the [animation module](https://matplotlib.org/stable/api/animation_api.html) is used. 
+
 
 ## Keeping it simple
 
-This code was written to be as understandable as possible for beginners in astronomical programming on Python 3. It is not the most optimized but it provides a good alternative to avoid using POO programming for beginners. 
+This code was written to be as understandable as possible for beginners in astronomical programming on Python 3. It is not the most optimized but it provides a good alternative to avoid using Object-Oriented Programming (OOP) for beginners. 
 
 
