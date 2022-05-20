@@ -42,6 +42,7 @@ a_i = G * sum ( (r_j - r_i) / abs(r_j - r_i)^3 )
 
 This code was written to be as understandable as possible for beginners in astronomical programming on Python 3. It is not the most optimized but it provides a good alternative to avoid using Object-Oriented Programming (OOP) for beginners. 
 
-
+![This is an image](simu1.png)
+![This is an image](simu2.png)
 
 _Copyright (C) Marwa Kadhem_
