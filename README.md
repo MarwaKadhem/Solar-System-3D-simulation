@@ -2,7 +2,7 @@
 
 ![This is an image](solarsys_im.jpg)
 
-General description: 3D simulation of the Solar System by propagating (Verlet-Störmer integration) the orbit of each celestial body,  in addition to the interplanetary trajectory of Pioneer 10. The initial  conditions used to solve the n-body problem are generated using the ephemeris  imported from the SPICE files (spiceypy library). 
+General description: 3D simulation of the Solar System by propagating the orbit of each celestial body,  in addition to the interplanetary trajectory of Pioneer 10. The initial  conditions used to solve the n-body problem are generated using the ephemeris  imported from the SPICE files (spiceypy library). 
 
 This code was written to be as understandable as possible for begineers in astronomical programming on Python 3. 
 The program is structured in 3 files:
@@ -12,4 +12,7 @@ The program is structured in 3 files:
 
 ## Solving the N-body problem
 
-The n-body problem is the problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally.
+The n-body problem is the problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally. In our case, we are solving an n-body problem restricted on the celestial bodies of the Solar System. 
+The solve an n-body problem the following steps have to be implemented:
+- Calculate the acceleration matrix of each body using Newton's universal law of gravitation.
+![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
